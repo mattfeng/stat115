@@ -1,0 +1,13 @@
+sample,treatment,sex,replicate,RNA isolation,researcher
+sample1,A,F,1,group1,1
+sample2,A,F,2,group2,2
+sample3,A,M,3,group3,1
+sample4,A,M,4,group4,2
+sample5,B,F,1,group3,2
+sample6,B,F,2,group5,1
+sample7,B,M,3,group1,2
+sample8,B,M,4,group6,1
+sample9,C,F,1,group4,1
+sample10,C,F,2,group6,2
+sample11,C,M,3,group2,1
+sample12,C,M,4,group5,2
