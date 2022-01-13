@@ -1,0 +1,11 @@
+PASS	Basic Statistics	Mov10_oe_1.subset.fq
+FAIL	Per base sequence quality	Mov10_oe_1.subset.fq
+WARN	Per tile sequence quality	Mov10_oe_1.subset.fq
+PASS	Per sequence quality scores	Mov10_oe_1.subset.fq
+FAIL	Per base sequence content	Mov10_oe_1.subset.fq
+FAIL	Per sequence GC content	Mov10_oe_1.subset.fq
+PASS	Per base N content	Mov10_oe_1.subset.fq
+PASS	Sequence Length Distribution	Mov10_oe_1.subset.fq
+FAIL	Sequence Duplication Levels	Mov10_oe_1.subset.fq
+WARN	Overrepresented sequences	Mov10_oe_1.subset.fq
+PASS	Adapter Content	Mov10_oe_1.subset.fq

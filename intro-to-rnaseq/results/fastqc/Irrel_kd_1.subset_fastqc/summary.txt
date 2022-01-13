@@ -1,0 +1,11 @@
+PASS	Basic Statistics	Irrel_kd_1.subset.fq
+PASS	Per base sequence quality	Irrel_kd_1.subset.fq
+PASS	Per tile sequence quality	Irrel_kd_1.subset.fq
+PASS	Per sequence quality scores	Irrel_kd_1.subset.fq
+FAIL	Per base sequence content	Irrel_kd_1.subset.fq
+WARN	Per sequence GC content	Irrel_kd_1.subset.fq
+PASS	Per base N content	Irrel_kd_1.subset.fq
+PASS	Sequence Length Distribution	Irrel_kd_1.subset.fq
+FAIL	Sequence Duplication Levels	Irrel_kd_1.subset.fq
+WARN	Overrepresented sequences	Irrel_kd_1.subset.fq
+PASS	Adapter Content	Irrel_kd_1.subset.fq

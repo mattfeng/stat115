@@ -32,3 +32,8 @@ be used to gain practical experience with the same tools.
   - Alternative exercises
     - [Introduction to (bulk) RNA-seq using High-Performance Computing - FAS-RC cluster](https://hbctraining.github.io/Intro-to-rnaseq-fasrc-salmon-flipped/schedule/links-to-lessons.html) is a good substitute for Parts I and II.
 
+## Remaining questions
+- How does TruSeq stranded prep work (dUTP method)?
+
+## Other tutorials to index
+- https://hbctraining.github.io/Accessing_public_genomic_data/lessons/downloading_from_SRA.html
