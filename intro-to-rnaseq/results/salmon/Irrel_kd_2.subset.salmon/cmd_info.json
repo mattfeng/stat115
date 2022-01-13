@@ -1,0 +1,11 @@
+{
+    "salmon_version": "1.6.0",
+    "index": "/home/mattfeng/stat115/intro-to-rnaseq/data/reference_data/salmon_index",
+    "libType": "A",
+    "unmatedReads": "Irrel_kd_2.subset.fq",
+    "output": "Irrel_kd_2.subset.salmon",
+    "seqBias": [],
+    "useVBOpt": [],
+    "validateMappings": [],
+    "auxDir": "aux_info"
+}

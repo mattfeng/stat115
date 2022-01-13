@@ -1,0 +1,22 @@
+{
+    "read_files": "[ Mov10_oe_2.subset.fq ]",
+    "expected_format": "SR",
+    "compatible_fragment_ratio": 1.0,
+    "num_compatible_fragments": 196441,
+    "num_assigned_fragments": 196441,
+    "num_frags_with_concordant_consistent_mappings": 196266,
+    "num_frags_with_inconsistent_or_orphan_mappings": 301,
+    "strand_mapping_bias": 0.0015312844984152986,
+    "MSF": 0,
+    "OSF": 0,
+    "ISF": 0,
+    "MSR": 0,
+    "OSR": 0,
+    "ISR": 0,
+    "SF": 301,
+    "SR": 196266,
+    "MU": 0,
+    "OU": 0,
+    "IU": 0,
+    "U": 0
+}
