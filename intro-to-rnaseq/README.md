@@ -19,6 +19,15 @@ This project introduces the fundamental practices involved in analyzing bulk RNA
 - [RNA-seq Experimental Design](https://hbctraining.github.io/Intro-to-rnaseq-fasrc-salmon-flipped/lessons/02_experimental_planning_considerations.html)
 - [Quasi-alignment with Salmon](https://hbctraining.github.io/Intro-to-rnaseq-hpc-salmon/lessons/04_quasi_alignment_salmon.html)
 
+## Conda environments
+- `salmon`
+  - `fastqc`
+  - `salmon`
+  - `mashmap`
+  - `bedtools`
+  - `qualimap`
+  - `star`
+
 ## Tutorial
 
 ### Pseudoalignment with Salmon
@@ -105,3 +114,52 @@ salmon quant -i $SALMON_INDEX_PATH \
   - `--numBootstraps`. specifies computation of bootstrapped abundance estimates. Bootstraps are required for isoform level differential expression analysis for estimation of technical variance. Here, you can set the value to 30.
 
 ### QC with STAR and Qualimap
+
+Before we can assess the quality of our transcript-level abundance estimates, we need to know where the transcripts mapped on the genome; Salmon only gives us the abundance, which is why it's fast.
+
+We will use STAR to align our RNA-seq reads to our reference genome which will let us see potential quality issues with our data, such as:
+- Are there more reads from one end of the gene or another? In other words, do we have a 3' or 5' bias?
+- What proportion of total reads map to exons? If there are a lot of intronic reads, it may indicate DNA contamination.
+
+#### Aligning RNA-seq with STAR
+
+##### Creating the STAR genome index
+
+Download the reference genome (FASTA) and gene annotations (GTF). You can see all the release versions [here](http://ftp.ensembl.org/pub/) and [all the files associated with version 95](http://ftp.ensembl.org/pub/release-95/).
+
+```bash
+wget ftp://ftp.ensembl.org/pub/release-95/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.chromosome.1.fa.gz
+```
+
+Create the STAR index with the following command:
+
+```bash
+STAR --runThreadN 6 \
+  --runMode genomeGenerate \
+  --genomeDir chr1_hg38_index \
+  --genomeFastaFiles /n/holylfs05/LABS/hsph_bioinfo/Everyone/Workshops/Intro_to_rnaseq/reference_data/Homo_sapiens.GRCh38.dna.chromosome.1.fa \
+  --sjdbGTFfile /n/holylfs05/LABS/hsph_bioinfo/Everyone/Workshops/Intro_to_rnaseq/reference_data/Homo_sapiens.GRCh38.92.gtf \
+  --sjdbOverhang 99
+```
+
+##### Aligning the RNA-seq data
+
+```bash
+STAR --genomeDir ~/reference_data/intro-to-rnaseq/chr1_hg38_95_index \
+  --runThreadN 6 \
+  --readFilesIn ../../raw_data/Mov10_oe_1.subset.fq \
+  --outFileNamePrefix Mov10_oe_1_ \
+  --outSAMtype BAM SortedByCoordinate \
+  --outSAMunmapped Within \
+  --outSAMattributes Standard
+```
+
+#### Assessing quality with Qualimap
+```bash
+qualimap rnaseq -outdir Mov10_oe_1 \
+  -a proportional \
+  -bam ../star/Mov10_oe_1_Aligned.sortedByCoord.out.bam \
+  -p strand-specific-reverse \
+  -gtf ~/reference_data/intro-to-rnaseq/Homo_sapiens.GRCh38.95.gtf \
+  --java-mem-size=8G
+```
