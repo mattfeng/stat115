@@ -31,6 +31,7 @@ be used to gain practical experience with the same tools.
   - Part VI: Batch effects and classification in the literature
   - Alternative exercises
     - [Introduction to (bulk) RNA-seq using High-Performance Computing - FAS-RC cluster](https://hbctraining.github.io/Intro-to-rnaseq-fasrc-salmon-flipped/schedule/links-to-lessons.html) is a good substitute for Parts I and II.
+    - [Introduction to Differential Gene Expression](https://hbctraining.github.io/DGE_workshop_salmon/) is a good substitute for Parts III and IV.
 
 ## Remaining questions
 - How does TruSeq stranded prep work (dUTP method)?

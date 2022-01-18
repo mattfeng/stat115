@@ -1,0 +1,1 @@
+You want to match the researcher with the batches (the same reseearcher should perform an entire batch), because you can then lump the batch error together as researcher + group effect.
