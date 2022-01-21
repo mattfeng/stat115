@@ -10,6 +10,7 @@
   - NCBI34, hg16 (2003)
 
 ## Ensembl vs. GENCODE vs. RefSeq
+- Ensembl, GENCODE, and RefSeq are **gene annotations** (i.e. specify what genes are called and where they are located on a reference genome) published by different organizations. They are different from the reference genomes themselves.
 - Sources
   - [Feature annotation: RefSeq vs Ensembl vs Gencode, what's the difference?](https://bioinformatics.stackexchange.com/questions/21/feature-annotation-refseq-vs-ensembl-vs-gencode-whats-the-difference)
   - [What Is The Difference Between Refseq And Ensembl Database?](https://www.biostars.org/p/72845/)
