@@ -35,6 +35,8 @@ be used to gain practical experience with the same tools.
 
 ## Remaining questions
 - How does TruSeq stranded prep work (dUTP method)?
+- How does `rlog` work in DESeq2? Why is `rlog` used?
 
 ## Other tutorials to index
 - https://hbctraining.github.io/Accessing_public_genomic_data/lessons/downloading_from_SRA.html
+
